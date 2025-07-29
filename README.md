@@ -1,5 +1,5 @@
   # Furniture-Analysis
-  ![](Disease_page.jpg)
+  ![](furniture_intro.jpg)
   
   Furniture Sales and Revenue Dashboard Analysis
   
@@ -22,76 +22,33 @@
   
   Data Visualization
    ![](FURNITURE_ANALYSIS.PNG)
+  1  Proficient use of various chart types (bar charts, scatter plots, KPI cards) to effectively communicate different types of information.
+  2  Dashboard Design: Logical grouping of related analyses (Sales Analysis, Revenue Analysis, Correlation Analysis, Revenue Loss Analysis) and interactive filters for user exploration.
+  3  Data Interpretation: The ability to present data in a way that allows users to quickly extract insights and draw conclusions.
   
-  Proficient use of various chart types (bar charts, scatter plots, KPI cards) to effectively communicate different types of information.
-  
-  Dashboard Design: Logical grouping of related analyses (Sales Analysis, Revenue Analysis, Correlation Analysis, Revenue Loss Analysis) and interactive filters for user exploration.
-  
-  Data Interpretation: The ability to present data in a way that allows users to quickly extract insights and draw conclusions.
-  
-  Data Transformation
-  
+ ##** Data Transformation**
   The dashboard's design implies several data transformation steps:
   
-  Aggregation: Summing up individual sales transactions to calculate "Total Sales," "Total Revenue," "Sum of Potential Revenue," and "Sum of Revenue Loss." Averaging for "Avg Discount %" and "Avg Profit Margin."
+  1.  Aggregation: Summing up individual sales transactions to calculate "Total Sales," "Total Revenue," "Sum of Potential Revenue," and "Sum of Revenue Loss." Averaging for "Avg Discount %" and "Avg Profit Margin."
+  2  Calculated Fields: Deriving metrics like "Avg Discount %," "Avg Profit Margin," and "Inventory Turnover." The "Revenue Loss Analysis" likely involves a calculated field for "Potential Revenue" (e.g., sales value at full price) and "Revenue Loss" (Potential Revenue - Actual Revenue).
+  3  Categorization/Grouping: Grouping sales data by "Product," "Brand," and "Location" for the various bar charts.
+  4  Data Cleaning: Ensuring that product names, brand names, and location data are consistent and accurate for effective grouping.
   
-  Calculated Fields: Deriving metrics like "Avg Discount %," "Avg Profit Margin," and "Inventory Turnover." The "Revenue Loss Analysis" likely involves a calculated field for "Potential Revenue" (e.g., sales value at full price) and "Revenue Loss" (Potential Revenue - Actual Revenue).
-  
-  Categorization/Grouping: Grouping sales data by "Product," "Brand," and "Location" for the various bar charts.
-  
-  Data Cleaning: Ensuring that product names, brand names, and location data are consistent and accurate for effective grouping.
-  
-  Relationship Establishment: Linking different tables (e.g., sales transactions, product master, location master) to enable cross-dimensional analysis.
-  
-  Data Modelling
-  
-  A well-structured data model is clearly implied by the dashboard's interactive nature and cross-dimensional reporting. It likely follows a star or snowflake schema, with:
-  
-  Fact Table (e.g., Sales Transactions): Containing individual sales records, including columns like Sales_Quantity, Revenue, Discount_Percentage, Profit_Margin, Product_ID, Brand_ID, Location_ID, Date.
-  
-  Dimension Tables:
-  
-  Product Dimension: Product_ID, Product_Name, Category (Bed, Chair, Desk, etc.).
-  
-  Brand Dimension: Brand_ID, Brand_Name.
-  
-  Location Dimension: Location_ID, Location_Type (Rural, Suburban, Urban).
-  
-  Date Dimension: Date, Year, Month, Day, etc. (though not explicitly filtered by date range, time-based metrics would require this).
-  
+   
   The filters on the left-hand side for "Category," "Brand," and "Location" directly correspond to attributes in these implied dimension tables, allowing users to slice the fact data.
   
-  Analytics and Visualization
+  ##**Analytics and Visualization**
   
   Analytics:
+  1  KPI Monitoring: The top section effectively uses large, clear numbers to highlight critical KPIs at a glance.
+  2  Sales & Revenue Breakdown: The dashboard provides a granular view of sales and revenue performance across products, brands, and locations, enabling easy identification of top and bottom performers.
+  3  Correlation Analysis: The scatter plots offer visual insights into potential relationships between variables, which is valuable for understanding drivers. For instance, the "Revenue vs Sales" plot shows a strong positive linear relationship, as expected. The "Inventory vs Sales" and "Discount % vs Sales" plots indicate less obvious or weaker correlations, which is also an important finding.
+  4  Loss Analysis: The "Revenue Loss Analysis" is a proactive analytical component, directly quantifying lost revenue by product, which is highly actionable.
   
-  KPI Monitoring: The top section effectively uses large, clear numbers to highlight critical KPIs at a glance.
+ ## Revenue Loss Visualization##:
+  The "Revenue Loss Analysis" chart is particularly effective, using a red indicator to highlight the lost percentage against the potential revenue bar.
   
-  Sales & Revenue Breakdown: The dashboard provides a granular view of sales and revenue performance across products, brands, and locations, enabling easy identification of top and bottom performers.
-  
-  Correlation Analysis: The scatter plots offer visual insights into potential relationships between variables, which is valuable for understanding drivers. For instance, the "Revenue vs Sales" plot shows a strong positive linear relationship, as expected. The "Inventory vs Sales" and "Discount % vs Sales" plots indicate less obvious or weaker correlations, which is also an important finding.
-  
-  Loss Analysis: The "Revenue Loss Analysis" is a proactive analytical component, directly quantifying lost revenue by product, which is highly actionable.
-  
-  Visualization:
-  
-  Consistent Layout: The dashboard maintains a consistent and clean layout, with filters on the left and analytical sections arranged systematically.
-  
-  Chart Variety: Appropriate use of different chart types:
-  
-  Bar Charts: Excellent for comparing discrete categories (Sales/Revenue by Product, Brand, Location). The horizontal bars work well for product/brand names.
-  
-  KPI Cards: Effective for highlighting single, important numbers at the top.
-  
-  Scatter Plots: The best choice for visualizing relationships and potential correlations between two continuous variables.
-  
-  Color Scheme: The use of a simple, muted color scheme (greys, dark blues, reds for loss) is professional and minimizes distractions, keeping the focus on the data.
-  
-  Clarity of Labels: Chart titles and axis labels are clear and concise, making the dashboard easy to interpret.
-  
-  Revenue Loss Visualization: The "Revenue Loss Analysis" chart is particularly effective, using a red indicator to highlight the lost percentage against the potential revenue bar.
-  
-  Feedbacks
+  ##**Feedbacks**
   
   Correlation Interpretation: While scatter plots are present, explicitly stating the R-squared value or correlation coefficient on the plots would provide a more quantitative measure of the relationship strength, especially for "Inventory vs Sales" and "Discount % vs Sales" where the visual correlation is not strong.
   
